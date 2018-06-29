@@ -121,9 +121,9 @@ with tf.Session() as sess:
     while True:
         sess.run(optimizer)
         if epoch % 20 == 0:
-            print("Iter:", epoch, "---------------------------------------------")
-            print(sess.run(label_batch_valid))
-            print(sess.run(example_batch_valid_predicted))
+            print("****** Iter:", epoch, " ******")
+            #print(sess.run(label_batch_valid))
+            #print(sess.run(example_batch_valid_predicted))
             print("Error de validacion:", sess.run(cost_valid))
 
         errorPrev = error
